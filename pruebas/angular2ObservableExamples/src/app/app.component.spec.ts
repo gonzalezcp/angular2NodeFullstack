@@ -3,7 +3,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
-describe('App: Angular2ObservableExamples', () => {
+describe('App: Angular2Example', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [

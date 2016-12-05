@@ -1,10 +1,10 @@
-import { Angular2ObservableExamplesPage } from './app.po';
+import { Angular2ExamplePage } from './app.po';
 
-describe('angular2-observable-examples App', function() {
-  let page: Angular2ObservableExamplesPage;
+describe('angular2-example App', function() {
+  let page: Angular2ExamplePage;
 
   beforeEach(() => {
-    page = new Angular2ObservableExamplesPage();
+    page = new Angular2ExamplePage();
   });
 
   it('should display message saying app works', () => {

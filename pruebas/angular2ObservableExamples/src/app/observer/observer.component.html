@@ -1,0 +1,42 @@
+<div>
+    <p>{{title}}</p>
+    <div>
+        <h3>Con eventos</h3>
+        <button (click)="escribirEscritaPorEvento('evento escibe variable')">pushNextToSubject para imprimir</button>
+        <p>una varible escrita por evento (click) que llama a funcion: {{escritaPorEvento}}</p>
+        
+    </div>
+     <div>
+         <h3>Con Observadores</h3>
+        
+        <button (click)="subscribirObserver1()">subscribir Observer 1</button>
+        <p>escrita por observador 1: {{escritaPorObservador}}</p>
+        <button (click)="subscribirObserver2()">subscribir Observer 2</button>
+        <p>escrita por observador 2: {{escritaPorObservador2}}</p>
+        <button (click)="subscribirObserver3()">subscribir Observer 3</button>
+        <p>escrita por observador 3: {{escritaPorObservador3}}</p><br>
+        <button (click)="pushNextToSubject('texto escrito por un evento 1')">evento1</button>
+        <button (click)="pushNextToSubject('texto escrito por un evento 2')">evento2</button>
+        <button (click)="pushNextToSubject('texto escrito por un evento 3')">evento3</button>
+    </div>
+         <div>
+         <h3>Con eventos (keyup)</h3>
+         <label for="onkepress">input con (keyup) </label>
+         <input id="onkepress" type="text" (keyup)="onKey($event)">
+         <p>valor de la variable inputOnKeyPress: {{inputOnKeyPress}}</p>
+    </div>
+    <div>
+        <h3>Con Binding magico Bananina</h3>
+        <label for="inputSubject">input con [()] que es como evento onKeyPress automatico</label>
+        <input id="inputBananina" type="text" [(ngModel)]="inputBananina">
+        <p>imput bananinan: {{inputBananina}}</p>
+        <button (click)="escribirinputBananina('lalla')">escribe la variblae iinputBananina</button>
+    </div>
+    <div>
+        <h3>Con Binding magico SIN Bananina</h3>
+        <label for="inputMagico">input con  [ngModel]= (ngModelChange) que es como evento onKeyPress automatico</label>
+        <input id="inputMagico" type="text" [ngModel]="inputMagico" (ngModelChange)="inputMagico=$event">
+        <p>imput bananinan: {{inputMagico}}</p>
+        <button (click)="escribirInputMagico('lalla')">escribe la variblae iinputBananina</button>
+    </div>
+</div>
